@@ -1,0 +1,19 @@
+<div>
+    <td><img src="https://www.serdartekin.com/add.png" alt="Add" routerLink="/todo/add"></td>
+</div>
+<ol *ngFor="let todo of todos" class="list-group">
+    <li class="list-group-item list-group-item{{todo.status == 1 ? '-danger' : todo.status == 2 ? '-warning' : '-success'}} d-flex justify-content-between align-items-start">
+      <div class="ms-2 me-auto">
+        <div class="fw-bold">{{todo.title}}</div>
+        <div style="font-size:medium">{{todo.description}}
+        <div style="font-size:x-small">{{todo.createdDate}}</div>
+        </div>
+        <div>
+            <td><img src="https://www.serdartekin.com/edit.png" alt="Edit" routerLink="/todo/update"></td>
+            <td><img src="https://www.serdartekin.com/delete.png" alt="Delete" routerLink="/todo/delete"></td>
+        </div>
+      </div>
+    </li>
+</ol>
+
+
